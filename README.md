@@ -2,7 +2,7 @@
 
 <h1 align="center">MDView</h1>
 
-<p align="center">A tiny, fast, native Markdown previewer for macOS. About 200&nbsp;KB, no Electron.</p>
+<p align="center">A tiny, fast, native Markdown previewer for macOS. About 1&nbsp;MB, no Electron.</p>
 
 <p align="center"><img src="docs/screenshot.png" width="640" alt="MDView showing a Markdown file"></p>
 
