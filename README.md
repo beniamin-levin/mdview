@@ -19,13 +19,14 @@ Shortcuts: <kbd>⌘O</kbd> open · <kbd>⌘R</kbd> reload · <kbd>⌘=</kbd> / <
 
 ## Install
 
-1. Download **MDView.zip** from the [latest release](https://github.com/beniamin-levin/mdview/releases/latest) and unzip it.
-2. Move `MDView.app` to `/Applications`.
-3. The app is not notarised, so macOS blocks it the first time. Clear the download flag once:
+MDView is distributed as source code only. Build it on your own Mac (needs the Xcode command line tools):
 
-   ```bash
-   xattr -dr com.apple.quarantine /Applications/MDView.app
-   ```
+```bash
+./build.sh
+```
+
+This builds a universal `MDView.app` (Apple Silicon + Intel) and installs it to `~/Applications`.
+The icon is drawn in code by [`icon/make_icon.swift`](icon/make_icon.swift).
 
 Then open a file with **Open With → MDView**, or from the terminal:
 
@@ -35,18 +36,7 @@ open -a MDView README.md
 
 To make it the default for `.md` files: select one in Finder, press <kbd>⌘I</kbd>, pick MDView under *Open with* and click **Change All…**.
 
-Requires macOS 13 or later (Apple Silicon or Intel).
-
-## Build from source
-
-Needs the Xcode command line tools.
-
-```bash
-./build.sh
-```
-
-This builds a universal `MDView.app` and installs it to `~/Applications`.
-The icon is drawn in code by [`icon/make_icon.swift`](icon/make_icon.swift).
+Requires macOS 13 or later.
 
 ## How it works
 
